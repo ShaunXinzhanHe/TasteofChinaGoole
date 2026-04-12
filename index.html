@@ -2,50 +2,451 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste of China</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
+    <div class="blossom"></div>
+    <div class="lantern left"></div>
+    <div class="lantern right"></div>
     <header>
-        <h1>Welcome to Taste of China</h1>
+        <h1>Taste of China</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="menu-link">Menu</a></li>
+                <li><a href="#" id="notice-link">Noticeboard</a></li>
+                <li><a href="#" id="contact-link">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main id="home">
-        <section>
-            <h2>Authentic Chinese Cuisine</h2>
-            <p>Experience the flavors of China with our traditional dishes.</p>
+    <main>
+        <section id="home-section">
+            <h2>Welcome to Taste of China</h2>
+            <p>Enjoy the Chinese cuisine from our takeaway menu!</p>
+            <p>Please inform us if you have any food allergies or intolerances. Our menu may contain the following allergens:</p>
+            <ul>
+                <li>Gluten</li>
+                <li>Peanuts</li>
+                <li>Shellfish</li>
+                <li>Eggs</li>
+                <li>Fish</li>
+                <li>Soya</li>
+                <li>Milk</li>
+                <li>Nuts</li>
+                <li>Celery</li>
+                <li>Sesame Seeds</li>
+                <li>Molluscs</li>
+                <li>Lupin</li>
+                <li>Sulphur Dioxide</li>
+                <li>Mustard</li>
+                <li>Crustaceans</li>
+                <li>Other</li>
+            </ul>
+            <h3>Opening Hours</h3>
+            <ul>
+                <li>Monday to Saturday: 5:00 PM - 10:00 PM</li>
+                <li>Sunday: 5:00 PM - 9:30 PM</li>
+                <li>Closed on Tuesdays</li>
+                <li>Open all Bank Holidays</li>
+            </ul>
+            <p>If you have any questions or concerns, please don't hesitate to contact us.</p>
         </section>
-        <section id="menu">
-            <h2>Our Menu</h2>
-            <div class="menu-item">
-                <h3>Kung Pao Chicken</h3>
-                <p>Spicy stir-fried chicken with peanuts and vegetables.</p>
+        <section id="menu-section" style="display:none;">
+            <h2>All Dishes Do Not Include Any Rice Or Chips</h2>
+            <p>S - Hot & Spicy Dish</p>
+            <h2>Soups</h2>
+            <ul>
+                <li>S1 Hot & Sour Soup       £4.00</li>
+                <li>S2 Chicken Sweetcorn Soup £4.00</li>
+                <li>S3 Chicken Noodle Soup    £4.00</li>
+                <li>S4 Chicken Mushroom Soup   £4.00</li>
+                <li>S5 Chicken & Tomato Soup   £4.00</li>
+                <li>S6 Crab Meat & Sweetcorn Soup (Fish & Molluscs) £4.00</li>
+                <li>S7 Beef Tomato Soup        £4.00</li>
+            </ul>
+            <h2>Appetisers</h2>
+            <ul>
+                <li>A21 Salt & Pepper Box (S)  £11.50</li>
+                <li>A1 Mix Starters For Two Person  £11.30</li>
+                <li>A2 Crispy Aromatic Duck (Pancakes, Cucumber, Spring Onion & Hoisin Sauce)<br>
+                    Quarter(6 Pancakes) £11.50<br> Half(12 Pancakes) £21.50</li>
+                <li>A3 Duck Spring Rolls (4 pieces) £4.40</li>
+                <li>A4 Large Pancake Roll (1 Piece) £3.30</li>
+                <li>A5 Medium Spring Roll (4 Piece) £4.10</li>
+                <li>A6 Mini Vegetable Spring Rolls (10 pieces) £4.00</li>
+                <li>A7 Sesame Prawn Toast (6 pieces) £6.30</li>
+                <li>A8 Crispy Wontons (6 pieces) (with Sweet & Sour Sauce) £4.90</li>
+                <li>A9 Crab Claws (4 pieces) £5.00</li>
+                <li>A10 Curry Samosa (8 pieces) £4.70</li>
+                <li>A11 Crispy Seaweed (Green Cabbages) £4.40</li>
+                <li>A12 Satay Chicken on Skewers (4 pieces) £7.30</li>
+                <li>A13 Spare Ribs £8.30<br>A. Dry<br>B. BBQ/Sweet & Sour/Peking Sauce<br>C. Syrup<br>D. Salt & Chilli</li>
+                <li>A14 Chicken Wings £6.80<br>A. Dry<br>B. BBQ/Sweet & Sour/Peking Sauce<br>C. Syrup<br>D. Salt & Chilli</li>
+                <li>A15 Shredded Smoked Chicken £7.10</li>
+                <li>A16 Salt & Pepper King Prawn £8.00</li>
+                <li>A17 Salt & Pepper Squid £8.00</li>
+                <li>A18 Salt & Pepper Chilli Chips £4.40</li>
+                <li>A19 Salt & Pepper Shredded Chicken £7.30</li>
+                <li>A20 Salt & Pepper Shredded Beef £7.60</li>
+                <li>A22 Salt & Pepper Chicken Balls £7.60</li>
+                <li>A23 Salt & Pepper Chicken Pieces £7.60</li>
+
+            </ul>
+            <h2>English Dishes (with Chips)</h2>
+            <ul>
+                <li>E1 Roast Chicken with Gravy £8.50</li>
+                <li>E2 Sirloin Steak with Gravy £11.30</li>
+                <li>E3 Special Omelette & Chips £8.50</li>
+                <li>E4 King Prawn Omelette & Chips £9.00</li>
+                <li>E5 Chicken Omelette & Chips £8.20</li>
+                <li>E6 Roast Pork Omelette & Chips £8.20</li>
+                <li>E7 Plain Omelette & Chips £7.00</li>
+                <li>E8 Sausages & Chips with Gravy £6.80</li>
+            </ul>
+            <h2>Seafood Dishes</h2>
+            <ul>
+                <li>SF1 King Prawn with Green Pepper in Black Bean Sauce (S) £8.00</li>
+                <li>SF2 King Prawn in Black Pepper Sauce (S) £8.00</li>
+                <li>SF3 King Prawn in Oyster Sauce £8.00</li>
+                <li>SF4 King Prawn in Peking Sauce £8.00</li>
+                <li>SF5 King Prawn in Satay Sauce £8.00</li>
+                <li>SF6 King Prawn in Garlic & Chilli Sauce £8.00</li>
+                <li>SF7 King Prawn with Cashew Nuts in Yellow Bean Sauce £8.00</li>
+                <li>SF8 King Prawn Szechuan Style (S) £8.00</li>
+                <li>SF9 King Prawn with Ginger & Spring Onion £8.00</li>
+                <li>SF10 King Prawn with Mushrooms £8.00</li>
+                <li>SF11 King Prawn with Bamboo Shoots £8.00</li>
+                <li>SF12 King Prawn with Mixed Vegetables £8.00</li>
+                <li>SF13 Kung Po King Prawn (S) £8.00</li>
+                <li>SF14 King Prawn in Chilli & Honey Sauce £8.00</li>
+                <li>SF15 Sea Spicy King Prawn (S) £8.00</li>
+                <li>SF16 Squid in Black Bean Sauce (S) £8.00</li>
+                <li>SF17 Squid Szechuan Style (S) £8.00</li>
+                <li>SF18 Squid with Ginger & Spring Onion £8.00</li>
+                <li>SF19 Sea Spicy Squid (S) £8.00</li>
+                <li>SF20 King Prawn with Tomato £8.00</li>
+                <li>SF21 King Prawn Chop Suey £8.00</li>
+            </ul>
+            <h2>Vegetarian Dishes</h2>
+            <ul>
+                <li>V1 Stir Fried Mushrooms £5.40</li>
+                <li>V2 Mushrooms in Gravy £5.40</li>
+                <li>V3 Mushroom in Black Bean Sauce £5.40</li>
+                <li>V4 Stir Fried Mixed Vegetables £5.40</li>
+                <li>V5 Mixed Vegetables Szechuan Style (S) £5.40</li>
+                <li>V6 Mixed Vegetables in Oyster Sauce £5.40</li>
+                <li>V7 Mixed Vegetables in Satay Sauce £5.40</li>
+                <li>V8 Mixed Vegetables in Garlic Sauce £5.40</li>
+                <li>V9 Stir Fried Beansprouts £5.40</li>
+                <li>V10 Stir Fried Onions £5.40</li>
+                <li>V11 Bamboo Shoots £5.40</li>
+                <li>V12 Tofu (Bean Curd) with Mixed Vegetables £5.40</li>
+                <li>V13 Tofu (Bean Curd) with Green Pepper in Black Bean Sauce (S) £5.40</li>
+            </ul>
+            <h2>Thai Dishes</h2>
+            <ul>
+                <li>T1 Thai Red Curry with Chicken/Pork or Beef £8.00</li>
+                <li>T2 Thai Green Curry with Chicken/Pork or Beef £8.00</li>
+                <li>T3 Thai Red Curry with King Prawn £8.00</li>
+                <li>T4 Thai Green Curry with King Prawn £8.00</li>
+                <li>T5 Thai Sweet Chilli King Prawn £8.00</li>
+                <li>T6 Thai Sweet Chilli with Chicken or Beef £8.00</li>
+            </ul>
+            <h2>Curry Dishes</h2>
+            <ul>
+                <li>CR1 Special Curry £8.00</li>
+                <li>CR2 King Prawn Curry £8.00</li>
+                <li>CR3 Roast Duck Curry £8.00</li>
+                <li>CR4 Chicken Curry £7.10</li>
+                <li>CR5 Beef Curry £7.50</li>
+                <li>CR6 Roast Pork Curry £7.20</li>
+                <li>CR7 Mushroom Curry £6.00</li>
+                <li>CR8 Mixed Vegetable Curry £6.00</li>
+            </ul>
+            <h2>Rice Dishes</h2>
+            <ul>
+                <li>RC1 House Special Fried Rice (BBQ Sauce)<br>Regular £7.90<br>Large £8.50</li>
+                <li>RC2 King Prawn Fried Rice<br>Regular £8.00<br>Large £8.50</li>
+                <li>RC3 Duck Fried Rice<br>Regular £8.00<br>Large £8.50</li>
+                <li>RC4 Yeung Chow Fried Rice<br>Regular £7.50<br>Large £8.20</li>
+                <li>RC5 Beef Fried Rice<br>Regular £7.70<br>Large £8.20</li>
+                <li>RC6 Chicken Fried Rice<br>Regular £7.30<br>Large £7.90</li>
+                <li>RC7 Shredded Roast Pork Fried Rice<br>Regular £7.30<br>Large £8.00</li>
+                <li>RC8 Singapore Fried Rice (S)<br>Regular £7.70<br>Large £8.20</li>
+                <li>RC9 Vegetarian Singapore Fried Rice (S)<br>Regular £6.60<br>Large £7.50</li>
+                <li>RC10 Vegetable Fried Rice<br>Regular £6.60<br>Large £7.50</li>
+                <li>RC11 Mushroom Fried Rice<br>Regular £6.30<br>Large £7.00</li>
+                <li>RC12 Egg Fried Rice<br>Regular £3.30<br>Large £4.50</li>
+                <li>RC13 Boiled Rice<br>Regular £3.20<br>Large £4.40</li>
+            </ul>
+            <h2>Chicken Dishes</h2>
+            <ul>
+                <li>CH1 Chicken with Green Pepper in Black Bean Sauce (S) £7.10</li>
+                <li>CH2 Chicken in Black Pepper Sauce (S) £7.10</li>
+                <li>CH3 Chicken in Oyster Sauce £7.10</li>
+                <li>CH4 Chicken in Peking Sauce £7.10</li>
+                <li>CH5 Chicken in Lemon or Orange Sauce £7.10</li>
+                <li>CH6 Chicken in Satay Sauce £7.10</li>
+                <li>CH7 Chicken with Cashew Nuts £7.10</li>
+                <li>CH8 Chicken Szechuan Style £7.10</li>
+                <li>CH9 Crispy Shredded Chilli Chicken £7.10</li>
+                <li>CH10 Chicken with Ginger and Spring Onion £7.10</li>
+                <li>CH11 Chicken with Mushrooms £7.10</li>
+                <li>CH12 Chicken with Pineapple £7.10</li>
+                <li>CH13 Chicken with Bamboo Shoots £7.10</li>
+                <li>CH14 Chicken with Mixed Vegetables £7.10</li>
+                <li>CH15 Chicken with Beansprouts £7.10</li>
+                <li>CH16 Kung Po Chicken (S) £7.10</li>
+                <li>CH17 Chicken in Chilli & Honey Sauce (S) £7.10</li>
+                <li>CH18 Sea Spicy Chicken (S) £7.10</li>
+                <li>CH19 Chicken with Tomato £7.10</li>
+                <li>CH20 Chicken Chop Suey £7.10</li>
+            </ul>
+            <h2>Sweet & Sour Dishes</h2>
+            <ul>
+                <li>SS1 Sweet & Sour King Prawn Balls £8.00</li>
+                <li>SS2 Sweet & Sour Chicken Balls £7.10</li>
+                <li>SS3 Sweet & Sour Pork Ball £7.10</li>
+                <li>SS4 Sweet & Sour King Prawn Cantonese Style £8.00</li>
+                <li>SS5 Sweet & Sour Chicken Cantonese Style £7.20</li>
+                <li>SS6 Sweet & Sour Pork Cantonese Style £7.20</li>
+            </ul>
+            <h2>Chow Mein Dishes (Noodles)</h2>
+            <ul>
+                <li>CM1 House Special Chow Mein (BBQ Sauce)<br>Regular £7.90<br>Large £8.40</li>
+                <li>CM2 King Prawn Chow Mein<br>Regular £8.30<br>Large £8.90</li>
+                <li>CM3 Duck Chow Mein<br>Regular £8.30<br>Large £8.90</li>
+                <li>CM4 Beef Chow Mein<br>Regular £7.70<br>Large £8.20</li>
+                <li>CM5 Chicken Chow Mein<br>Regular £7.30<br>Large £7.80</li>
+                <li>CM6 Pork Chow Mein<br>Regular £7.40<br>Large £7.90</li>
+                <li>CM7 Yeung Chow Chow Mein<br>Regular £7.50<br>Large £8.00</li>
+                <li>CM8 Singapore Chow Mein (S)<br>Regular £7.50<br>Large £8.00</li>
+                <li>CM9 Singapore Vermicelli (S)<br>Regular £6.80<br>Large £7.30</li>
+                <li>CM10 Vegetable Vermicelli (S)<br>Regular £6.80<br>Large £7.30</li>
+                <li>CM11 Vegetarian Singapore Vermicelli (S)<br>Regular £6.80<br>Large £7.30</li>
+                <li>CM12 Soft Noodles<br>Regular £4.70<br>Large £5.50</li>
+                <li>CM13 Mushroom Chow Mein<br>Regular £6.70<br>Large £7.20</li>
+                <li>CM14 Vegetable Chow Mein<br>Regular £6.70<br>Large £7.20</li>
+            </ul>
+            <h2>Beef Dishes</h2>
+            <ul>
+                <li>BF1 Beef with Green Pepper in Black Bean Sauce (S) £7.50</li>
+                <li>BF2 Beef with Black Pepper Sauce (S) £7.50</li>
+                <li>BF3 Beef in Oyster Sauce £7.50</li>
+                <li>BF4 Beef in Peking Sauce £7.50</li>
+                <li>BF5 Beef in Satay Sauce £7.50</li>
+                <li>BF6 Beef in Garlic & Chilli Sauce £7.50</li>
+                <li>BF8 Beef Szechuan Style (S) £7.50</li>
+                <li>BF9 Crispy Shredded Chilli Beef £7.50</li>
+                <li>BF10 Beef with Ginger & Spring Onion £7.50</li>
+                <li>BF11 Beef with Mushrooms £7.50</li>
+                <li>BF12 Beef with Pineapple £7.50</li>
+                <li>BF13 Beef with Bamboo Shoots £7.50</li>
+                <li>BF14 Beef with Mixed Vegetables £7.50</li>
+                <li>BF15 Beef with Beansprouts £7.50</li>
+                <li>BF16 Kung Po Beef (S) £7.50</li>
+                <li>BF17 Beef in Chilli & Honey Sauce (S) £7.50</li>
+                <li>BF18 Sea Spicy Beef (S) £7.50</li>
+                <li>BF19 Beef with Tomato £7.50</li>
+                <li>BF20 Beef Chop Suey £7.50</li>
+            </ul>
+            <h2>Roast Pork Dishes</h2>
+            <ul>
+                <li>PK1 Pork with Green Pepper in Black Bean Sauce (S) £7.20</li>
+                <li>PK2 Pork with Black Pepper Sauce (S) £7.20</li>
+                <li>PK3 Pork in Oyster Sauce £7.20</li>
+                <li>PK4 Pork in Peking Sauce £7.20</li>
+                <li>PK5 Pork in Satay Sauce £7.20</li>
+                <li>PK6 Pork with Cashew Nuts in Yellow Bean Sauce £7.20</li>
+                <li>PK7 Pork Szechuan Style (S) £7.20</li>
+                <li>PK8 Pork with Ginger & Spring Onion £7.20</li>
+                <li>PK9 Pork with Mushrooms £7.20</li>
+                <li>PK10 Pork with Pineapple £7.20</li>
+                <li>PK11 Pork with Bamboo Shoots £7.20</li>
+                <li>PK12 Pork with Mixed Vegetables £7.20</li>
+                <li>PK13 Pork with Beansprouts £7.20</li>
+                <li>PK14 Kung Po Pork (S) £7.20</li>
+                <li>PK15 Pork in Chilli & Honey Sauce (S) £7.20</li>
+                <li>PK16 Sea Spicy Pork (S) £7.20</li>
+                <li>PK17 Pork with Tomato £7.20</li>
+                <li>PK18 Pork Chop Suey £7.20</li>
+            </ul>
+            <h2>Roast Duck Dishes</h2>
+            <ul>
+                <li>DK1 Duck with Green Pepper in Black Bean Sauce (S) £8.00</li>
+                <li>DK2 Duck with Black Pepper Sauce (S) £8.00</li>
+                <li>DK3 Duck in Oyster Sauce £8.00</li>
+                <li>DK4 Duck in Peking Sauce £8.00</li>
+                <li>DK5 Duck in Satay Sauce £8.00</li>
+                <li>DK6 Crispy Duck in Plum Sauce £8.00</li>
+                <li>DK7 Duck in Garlic & Chilli Sauce £8.00</li>
+                <li>DK8 Duck with Cashew Nuts in Yellow Bean Sauce £8.00</li>
+                <li>DK9 Duck Szechuan Style (S) £8.00</li>
+                <li>DK10 Duck with Ginger & Spring Onion £8.00</li>
+                <li>DK11 Duck with Mushrooms £8.00</li>
+                <li>DK12 Duck with Pineapple £8.00</li>
+                <li>DK13 Duck with Bamboo Shoots £8.00</li>
+                <li>DK14 Duck with Mixed Vegetables £8.00</li>
+                <li>DK15 Duck with Beansprouts £8.00</li>
+                <li>DK16 Kung Po Duck (S) £8.00</li>
+                <li>DK17 Duck in Chilli & Honey Sauce (S) £8.00</li>
+                <li>DK18 Sea Spicy Duck (S) £8.00</li>
+                <li>DK19 Duck with Tomato £8.00</li>
+                <li>DK20 Duck Chop Suey £8.00</li>
+            </ul>
+            <h2>House Special Dishes</h2>
+            <ul>
+                <li>SP1 House Special with Green Pepper in Black Bean Sauce (S) £8.00</li>
+                <li>SP2 House Special with Mushrooms £8.00</li>
+                <li>SP3 House Special Szechuan Style (S) £8.00</li>
+                <li>SP4 House Special in Satay Sauce £8.00</li>
+                <li>SP5 House Special with Black Pepper Sauce (S) £8.00</li>
+                <li>SP6 House Special with Cashew Nuts £8.00</li>
+                <li>SP7 House Special in Oyster Sauce £8.00</li>
+                <li>SP8 House Special Kung Po (S) £8.00</li>
+                <li>SP9 House Special in Chilli & Honey Sauce (S) £8.00</li>
+                <li>SP10 House Special with Mixed Vegetables £8.00</li>
+                <li>SP11 House Special Chop Suey £8.00</li>
+                <li>SP12 House Special with Tofu £8.00</li>
+            </ul>
+            <h2>Egg Foo Yung Dishes</h2>
+            <ul>
+                <li>EF1 Special Foo Yung £8.20</li>
+                <li>EF2 Chicken Foo Yung £8.00</li>
+                <li>EF3 Roast Pork Foo Yung £8.10</li>
+                <li>EF4 Shrimp Foo Yung £8.10</li>
+                <li>EF5 King Prawn Foo Yung £8.50</li>
+                <li>EF6 Mushroom Foo Yung £7.50</li>
+            </ul>
+            <h2>Extra Dishes</h2>
+            <ul>
+                <li>EX1 Chips £2.80</li>
+                <li>EX2 Prawn Crackers £3.00</li>
+                <li>EX3 Onion Rings £3.70</li>
+                <li>EX4 Sweet & Sour Sauce £2.70</li>
+                <li>EX5 Curry Sauce £2.70</li>
+                <li>EX6 Gravy Sauce £2.70</li>
+                <li>EX7 Barbecue Sauce £2.70</li>
+                <li>EX8 Peking Sauce £2.70</li>
+                <li>EX9 Satay Sauce £2.70</li>
+            </ul>
+            <h2>Desserts & Drinks</h2>
+            <ul>
+                <li>DS1 Banana Fritters £3.80</li>
+                <li>DS2 Pineapple Fritters £3.80</li>
+                <li>DS3 Can of Soft Drink £1.40</li>
+                <li>DS4 Bottle of Soft Drinks £3.20</li>
+            </ul>
+            <h2>Chef's Recommendations</h2>
+            <ul>
+                <li>Taste of China Special (Rice or Noodles) in Sauce<br>(King Prawn,Beef,Chicken,Pork) with Egg £8.50</li>
+                <li>Special Chilli Chicken £7.80</li>
+                <li>Special Chilli Beef £7.80</li>
+            </ul>
+            <h2>One Tray Special Offer [1]</h2>
+            <ul>
+                <li>Chips 'n' Sauce £4.70</li>
+                <li>Fried Rice with Chips 'n' Sauce £5.40</li>
+                <li>Spare Ribs (3) with Chips £6.10</li>
+                <li>Spare Ribs (3) with Fried Rice £6.50</li>
+                <li>Chicken Balls (5) with Chips £6.10</li>
+                <li>Chicken Balls (5) with Fried Rice £6.90</li>
+                <li>Chicken Balls with Fried Rice & Chips £8.00</li>
+            </ul>
+            <h2>One Tray Special Offer [2]</h2>
+            <ul>
+                <li>Cantonese Style Sweet & Sour Chicken with Fried Rice & Chips £8.00</li>
+                <li>Chicken Curry with Fried Rice & Chips £8.00</li>
+                <li>Chicken or Beef in Black Bean Sauce with Fried Rice & Chips £8.00</li>
+            </ul>
+            <h2>Special Set Dinner</h2>
+            <h3>A For 2 Persons £29.00</h3>
+            <ul>
+                <li>Mixed Starter for Two</li>
+                <li>Chicken with Mushroom</li>
+                <li>Beef in Szechuan Sauce</li>
+                <li>Egg Fried Rice (2)</li>
+                <li>Prawn Crackers</li>
+            </ul>
+            <h3>B for 3 Persons £45.00</h3>
+            <ul>
+                <li>Mixed Starter for Three</li>
+                <li>Beef Green Pepper in Black Bean Sauce</li>
+                <li>Sweet & Sour Chicken Cantonese Style</li>
+                <li>King Prawn Ginger Spring Onion</li>
+                <li>Mixed Vegetables</li>
+                <li>Chicken Fried Rice (3)</li>
+                <li>Prawn Crackers</li>
+            </ul>
+            <h3>C for 4 Persons £52.00</h3>
+            <ul>
+                <li>Mini Vegetable Spring Rolls</li>
+                <li>Prawn on Toast</li>
+                <li>BBQ Spare Ribs</li>
+                <li>Chicken with Cashew Nuts</li>
+                <li>King Prawn with Mushroom</li>
+                <li>Lemon Chicken</li>
+                <li>Shredded Beef in Chilli Sauce</li>
+                <li>Yeung Chow Fried Rice (1 Large)</li>
+                <li>Chicken Chow Mein (1 Large)</li>
+                <li>Banana Fritters</li>
+                <li>Prawn Crackers</li>
+            </ul>
+        </section>
+        <section id="contact-section" style="display:none;">
+            <h2>Any Problems, Contact Us</h2>
+            <p>Phone: 01405 767342</p>
+            <p>Address: 5-9 Aire Street, Goole, DN14 5QW</p>
+            <h3>Opening Hours</h3>
+            <ul>
+                <li>Monday to Saturday: 5:00 PM - 10:00 PM</li>
+                <li>Sunday: 5:00 PM - 9:30 PM</li>
+                <li>Closed on Tuesdays</li>
+                <li>Open all Bank Holidays</li>
+            </ul>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section id="notice-section" style="display:none;">
+            <h2>Noticeboard</h2>
+            <div class="noticeboard">
+                <div class="notice">
+                    <h3>Bank Holiday Opening Times</h3>
+                    <p>We will be open as usual.</p>
+                </div>
+                <div class="notice">
+                    <h3>Special Offer</h3>
+                    <p>e.g. Get 10% off all orders over £30 every Friday!</p>
+                </div>
+                <!-- Add more notices here as needed -->
             </div>
-            <div class="menu-item">
-                <h3>Sweet and Sour Pork</h3>
-                <p>Crispy pork in a tangy sweet and sour sauce.</p>
-            </div>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We bring the best of Chinese cuisine to your table.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Visit us at 123 Main St, Anytown, USA</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Taste of China</p>
+    <footer class="site-footer">
+        <div class="footer-social">
+            <a href="mailto:tasteofchinagooleofficial@gmail.com" title="Email" target="_blank" rel="noopener">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email" class="footer-icon">
+            </a>
+            <a href="https://www.instagram.com/taste_of_china_goole_official" title="Instagram" target="_blank" rel="noopener">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" class="footer-icon">
+            </a>
+            <a href="https://www.facebook.com/taste.china.315" title="Facebook" target="_blank" rel="noopener">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" class="footer-icon">
+            </a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2026 Taste of China. All rights reserved.
+        </div>
     </footer>
-    <script src="main.js"></script>
 </body>
 </html>
