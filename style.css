@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(135deg, #fff7e6 0%, #ffe4e1 100%);
     font-family: 'Noto Sans SC', 'Segoe UI', Arial, sans-serif;
@@ -5,6 +9,8 @@ body {
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
+    width: 100%;
+    padding-bottom: 100px;
 }
 
 /* Cherry Blossom Animation */
@@ -114,17 +120,20 @@ nav ul {
     padding: 0;
     margin: 0;
     display: inline-flex;
-    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
 }
 nav a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #b22222;
     text-decoration: none;
-    padding: 8px 18px;
+    padding: 8px 14px;
     border-radius: 20px;
     transition: background 0.3s, color 0.3s;
     background: rgba(255, 236, 217, 0.7);
     box-shadow: 0 2px 8px rgba(255, 60, 60, 0.07);
+    white-space: nowrap;
 }
 nav a:hover, nav a:focus {
     background: #ffb7c5;
@@ -134,7 +143,8 @@ nav a:hover, nav a:focus {
 /* Main Sections */
 main {
     margin: 40px auto;
-    max-width: 600px;
+    max-width: min(600px, 95vw);
+    width: 100%;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(255, 60, 60, 0.09);
@@ -146,6 +156,14 @@ section {
     margin-bottom: 32px;
     animation: fade-in 1s ease;
 }
+ul, li, p, h2, h3, form, input, textarea {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+input, textarea {
+    min-width: 0;
+}
+
 @keyframes fade-in {
     from { opacity: 0; transform: translateY(30px);}
     to { opacity: 1; transform: translateY(0);}
@@ -207,7 +225,7 @@ button[type="submit"]:hover {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     background: linear-gradient(90deg, #fffbe6 60%, #ffe4e1 100%);
     box-shadow: 0 -2px 12px rgba(255, 60, 60, 0.08);
     display: flex;
@@ -295,5 +313,34 @@ button[type="submit"]:hover {
     }
     .footer-social {
         gap: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 28px 0 16px 0;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+    main {
+        padding: 24px 16px;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .noticeboard {
+        padding: 16px 12px;
+    }
+    form {
+        gap: 10px;
+    }
+    button[type="submit"] {
+        padding: 10px 18px;
+        font-size: 1rem;
     }
 }
