@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Contact form validation and submission
     const contactForm = contactSection.querySelector("form");
     contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
         const name = contactForm.querySelector("#name").value.trim();
         const email = contactForm.querySelector("#email").value.trim();
         const message = contactForm.querySelector("#message").value.trim();
@@ -52,15 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!name || !email || !message) {
+            e.preventDefault();
             alert("Please fill in all fields.");
-            return;     
+            return;
         }
         if (!emailRegex.test(email)) {
+            e.preventDefault();
             alert("Please enter a valid email address.");
             return;
         }
 
-        // Send email using mailto (opens user's email client)
-        window.location.href = `mailto:tasteofchinagooleofficial@gmail.com?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + "\n\nFrom: " + name + " <" + email + ">")}`;
+        // Let the browser submit the form to Formspree
     });
 });
